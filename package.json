@@ -2,7 +2,7 @@
   "name": "scoutly",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://evangruhlkey.github.io/evangruhlkey.github.io",
+  "homepage": "https://evangruhlkey.github.io/",
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@testing-library/jest-dom": "^5.17.0",
