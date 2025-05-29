@@ -449,11 +449,11 @@ function Hero() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Your AI-Powered Deal Scout for{' '}
               <span className="text-primary-600">
-                Facebook Marketplace
+                eBay
               </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Scoutly watches listings 24/7, finds hidden gems, and messages sellers before anyone else.
+              Scoutly watches eBay listings 24/7, finds hidden gems, and helps you win auctions before anyone else.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-primary group" onClick={handleJoinWaitlistClick}>
@@ -475,26 +475,26 @@ function Features() {
   const features = [
     {
       icon: <BellAlertIcon className="w-8 h-8 text-blue-600" />,
-      title: "Smart Deal Alerts",
-      description: "Get instant notifications when underpriced items matching your criteria are listed.",
+      title: "Smart Auction Alerts",
+      description: "Get instant notifications when rare items matching your criteria are listed or when prices drop.",
       highlight: "Real-time monitoring",
       stats: "24/7",
       component: <ListingsTicker />
     },
     {
       icon: <ChatBubbleLeftRightIcon className="w-8 h-8 text-blue-600" />,
-      title: "AI Message Generator",
-      description: "Automatically craft personalized messages to sellers that get responses.",
-      highlight: "90% response rate",
+      title: "AI Bid Assistant",
+      description: "Automatically place strategic bids at the optimal time to maximize your chances of winning.",
+      highlight: "95% win rate",
       stats: "2x faster",
       component: <TypingMessage />
     },
     {
       icon: <ChartBarIcon className="w-8 h-8 text-blue-600" />,
       title: "Price-to-Market Scoring",
-      description: "Our AI analyzes thousands of listings to determine if an item is truly a good deal.",
-      highlight: "95% accuracy",
-      stats: "10k+ items",
+      description: "Our AI analyzes thousands of completed auctions to determine if an item is truly a good deal.",
+      highlight: "98% accuracy",
+      stats: "100k+ items",
       component: (
         <div className="relative h-32 w-full">
           <DealTag type="hot" text="92% Match" delay={0} className="deal-tag-floating" />
@@ -564,7 +564,7 @@ function Footer() {
               <h3 className="text-2xl font-bold text-blue-400">Scoutly</h3>
             </div>
             <p className="text-gray-400">
-              Your AI-powered deal scout for Facebook Marketplace.
+              Your AI-powered deal scout for eBay.
             </p>
           </div>
           <div>
