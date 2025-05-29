@@ -9,12 +9,12 @@ function NetworkAnimation() {
   // We will manage traveling dots directly in the animation loop
 
   const sampleListings = [
-    { title: "Vintage Camera", price: "$50", condition: "Used" },
-    { title: "Antique Chair", price: "$120", condition: "Good" },
-    { title: "Rare Vinyl Record", price: "$30", condition: "Mint" },
-    { title: "Collectibe Coin Set", price: "$80", condition: "Like New" },
-    { title: "Designer Handbag", price: "$300", condition: "Excellent" },
-    { title: "Gaming Console", price: "$250", condition: "Used" },
+    { title: "Vintage Leica M3 Camera", price: "$1,200", condition: "Mint", timeLeft: "2h 15m" },
+    { title: "Limited Edition Star Wars Action Figure", price: "$350", condition: "New in Box", timeLeft: "5h 30m" },
+    { title: "Rare 1959 Gibson Les Paul", price: "$45,000", condition: "Excellent", timeLeft: "1d 3h" },
+    { title: "First Edition Harry Potter Book Set", price: "$2,800", condition: "Like New", timeLeft: "3h 45m" },
+    { title: "Vintage Rolex Submariner", price: "$12,500", condition: "Excellent", timeLeft: "4h 20m" },
+    { title: "Limited Edition Gaming Console", price: "$750", condition: "New", timeLeft: "6h 10m" },
   ];
 
   useEffect(() => {
@@ -77,6 +77,7 @@ function NetworkAnimation() {
         <h5>${randomListing.title}</h5>
         <p>${randomListing.price}</p>
         <span>Condition: ${randomListing.condition}</span>
+        <span class="text-red-500 block mt-1">Time Left: ${randomListing.timeLeft}</span>
       `;
 
       container.appendChild(popup);
