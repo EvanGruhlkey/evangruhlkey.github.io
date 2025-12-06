@@ -48,7 +48,13 @@ export const Header = () => {
          src="/QuorilLogo.svg"
          alt="Quoril"
          className="w-[200px] sm:w-[220px] md:w-[250px] -ml-9"
-         style={{ imageRendering: 'crisp-edges', WebkitFontSmoothing: 'antialiased' }}
+         style={{ 
+           imageRendering: 'crisp-edges', 
+           WebkitFontSmoothing: 'antialiased',
+           transform: 'translateZ(0)',
+           backfaceVisibility: 'hidden',
+           WebkitBackfaceVisibility: 'hidden'
+         }}
        />
     </button>
 

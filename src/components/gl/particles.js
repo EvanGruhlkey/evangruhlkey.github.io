@@ -31,7 +31,7 @@ export const Particles = memo(function Particles({
   
   // Performance optimization: skip frames for FBO rendering
   const frameCount = useRef(0);
-  const skipFrames = 0; // Update FBO every frame for maximum smoothness
+  const skipFrames = 0; // Update FBO every frame for 60 FPS smoothness
   
   // Create simulation material with scale parameter
   const simulationMaterial = useMemo(() => {
@@ -84,8 +84,8 @@ export const Particles = memo(function Particles({
     if (!dofPointsMaterial || !simulationMaterial) return;
 
     // Clamp delta to prevent large jumps during GC pauses or tab throttling
-    // This prevents the animation from freezing/stuttering
-    const clampedDelta = Math.min(delta, 0.1);
+    // Target 60 FPS = 1/60 = ~0.0166s per frame
+    const clampedDelta = Math.min(delta, 1/60 * 2); // Allow up to 2 frames worth
 
     // Performance optimization: skip frames for expensive FBO rendering
     frameCount.current++;
