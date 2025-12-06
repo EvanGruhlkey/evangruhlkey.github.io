@@ -76,7 +76,7 @@ export const GL = ({ hovering = false, scrollRef = null }) => {
           preserveDrawingBuffer: false,
           failIfMajorPerformanceCaveat: false,
         }}
-        performance={{ min: 0.5 }}
+        performance={{ min: 1, max: 1 }}
         camera={{
           position: [
             1.2629783123314589, 2.664606471394044, -1.8178993743288914,

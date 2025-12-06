@@ -266,13 +266,19 @@ export function Hero() {
                   src="/QuorilLogo.svg"
                   alt="Quoril"
                   className="w-[160px] sm:w-[180px] h-auto mb-6 -ml-2"
-                  style={{ imageRendering: 'crisp-edges', WebkitFontSmoothing: 'antialiased' }}
+                  style={{ 
+                    imageRendering: 'crisp-edges', 
+                    WebkitFontSmoothing: 'antialiased',
+                    transform: 'translateZ(0)',
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden'
+                  }}
                 />
                 {/* Social Media Icons */}
                 <div className="flex items-center gap-6 ml-6">
                   {/* Instagram */}
                   <a 
-                    href="https://instagram.com/quoril" 
+                    href="https://instagram.com/getquoril" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-foreground/60 hover:text-foreground transition-colors"
