@@ -265,7 +265,8 @@ export function Hero() {
                 <img 
                   src="/QuorilLogo.svg"
                   alt="Quoril"
-                  className="w-[180px] h-auto mb-6 -ml-2"
+                  className="w-[160px] sm:w-[180px] h-auto mb-6 -ml-2"
+                  style={{ imageRendering: 'crisp-edges', WebkitFontSmoothing: 'antialiased' }}
                 />
                 {/* Social Media Icons */}
                 <div className="flex items-center gap-6 ml-6">
