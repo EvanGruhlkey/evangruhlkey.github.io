@@ -5,10 +5,12 @@ import { Header } from './components/Header';
 import { Terms } from './components/Terms';
 import { Privacy } from './components/Privacy';
 import { Contact } from './components/Contact';
+import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="min-h-screen bg-background">
         <Header />
         <main>
