@@ -2,14 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Sentient';
+  src: url('./assets/fonts/Sentient-Extralight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sentient';
+  src: url('./assets/fonts/Sentient-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   
   body {
-    @apply text-gray-900 bg-gray-50;
-    perspective: 1000px;
+    background: #E8E4DC;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #E8E4DC;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 6px;
+    border: 3px solid #E8E4DC;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #333333;
+  }
+
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #000000 #E8E4DC;
+  }
+}
+
+#webgl {
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  pointer-events: none;
+  /* GPU acceleration */
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+#webgl canvas {
+  width: 100%;
+  height: 100%;
+  /* GPU optimization */
+  transform: translate3d(0, 0, 0);
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  #webgl {
+    display: none;
   }
 }
 

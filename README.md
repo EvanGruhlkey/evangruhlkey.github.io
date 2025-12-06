@@ -1,2 +1,2 @@
-Your AI-powered deal scout for Facebook Marketplace and beyond.
+Quoril - the AI for buying
 
