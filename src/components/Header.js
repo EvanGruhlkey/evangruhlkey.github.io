@@ -44,18 +44,15 @@ export const Header = () => {
   onClick={handleLogoClick}
   className="h-16 md:h-20 w-auto flex items-center cursor-pointer hover:opacity-80 transition-opacity"
 >
-       <img 
-         src="/QuorilLogo.svg"
-         alt="Quoril"
-         className="w-[200px] sm:w-[220px] md:w-[250px] -ml-9"
-         style={{ 
-           imageRendering: 'crisp-edges', 
-           WebkitFontSmoothing: 'antialiased',
-           transform: 'translateZ(0)',
-           backfaceVisibility: 'hidden',
-           WebkitBackfaceVisibility: 'hidden'
-         }}
-       />
+       {/* Use PNG on mobile for sharp rendering, SVG on desktop */}
+       <picture>
+         <source media="(max-width: 767px)" srcSet="/QuorilLogo.png" />
+         <img 
+           src="/QuorilLogo.svg"
+           alt="Quoril"
+           className="w-[200px] sm:w-[220px] md:w-[250px] -ml-9"
+         />
+       </picture>
     </button>
 
     {/* Desktop Navigation */}
