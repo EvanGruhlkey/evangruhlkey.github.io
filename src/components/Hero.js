@@ -262,18 +262,15 @@ export function Hero() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-16 mb-12">
               {/* Logo and Social Media */}
               <div className="md:col-span-1 flex flex-col items-start">
-                <img 
-                  src="/QuorilLogo.svg"
-                  alt="Quoril"
-                  className="w-[160px] sm:w-[180px] h-auto mb-6 -ml-2"
-                  style={{ 
-                    imageRendering: 'crisp-edges', 
-                    WebkitFontSmoothing: 'antialiased',
-                    transform: 'translateZ(0)',
-                    backfaceVisibility: 'hidden',
-                    WebkitBackfaceVisibility: 'hidden'
-                  }}
-                />
+                {/* Use PNG on mobile for sharp rendering, SVG on desktop */}
+                <picture>
+                  <source media="(max-width: 767px)" srcSet="/QuorilLogo.png" />
+                  <img 
+                    src="/QuorilLogo.svg"
+                    alt="Quoril"
+                    className="w-[160px] sm:w-[180px] h-auto mb-6 -ml-2"
+                  />
+                </picture>
                 {/* Social Media Icons */}
                 <div className="flex items-center gap-6 ml-6">
                   {/* Instagram */}
