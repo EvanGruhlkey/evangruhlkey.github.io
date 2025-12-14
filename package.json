@@ -7,6 +7,7 @@
     "@heroicons/react": "^2.1.1",
     "@react-three/drei": "^9.88.0",
     "@react-three/fiber": "^8.15.0",
+    "@supabase/supabase-js": "^2.87.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.0",
     "react-scripts": "5.0.1",
+    "shaders": "^2.2.6",
     "tailwind-merge": "^3.4.0",
     "three": "^0.160.0",
     "web-vitals": "^2.1.4"
