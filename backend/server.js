@@ -515,6 +515,9 @@ app.listen(PORT, () => {
   console.log(`🛒 eBay Integration:`, process.env.EBAY_APP_ID ? '✓ Configured' : '✗ Not configured');
 });
 
+// Export for Vercel serverless
+module.exports = app;
+
 
 
 
