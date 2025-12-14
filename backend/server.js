@@ -505,6 +505,26 @@ const dealsRouter = require('./routes/deals');
 app.use('/api/deals', dealsRouter);
 
 // ============================================
+// ROOT ROUTE (Health Check)
+// ============================================
+
+app.get('/', (req, res) => {
+  res.json({ 
+    status: 'online',
+    message: 'Quoril API is running',
+    version: '1.0.0'
+  });
+});
+
+app.get('/api', (req, res) => {
+  res.json({ 
+    status: 'online',
+    message: 'Quoril API v1.0.0',
+    endpoints: ['/api/auth', '/api/searches', '/api/deals', '/api/user']
+  });
+});
+
+// ============================================
 // START SERVER
 // ============================================
 
