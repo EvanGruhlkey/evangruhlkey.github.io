@@ -18,7 +18,10 @@ console.log('🔌 Connecting to Supabase...');
 console.log('URL:', supabaseUrl ? '✓ Set' : '✗ Missing');
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+  credentials: true
+}));
 app.use(express.json());
 
 // Middleware to verify Supabase JWT token
