@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b6f268cb.css",
+    "main.js": "/static/js/main.6e49e8c9.js",
+    "static/media/Sentient-LightItalic.woff": "/static/media/Sentient-LightItalic.6a4f13473f48a5dcf152.woff",
+    "static/media/Sentient-Extralight.woff": "/static/media/Sentient-Extralight.d7e37bc4a4cfaebc334f.woff",
+    "index.html": "/index.html",
+    "main.b6f268cb.css.map": "/static/css/main.b6f268cb.css.map",
+    "main.6e49e8c9.js.map": "/static/js/main.6e49e8c9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6f268cb.css",
+    "static/js/main.6e49e8c9.js"
+  ]
+}
